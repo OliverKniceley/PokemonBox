@@ -1,6 +1,7 @@
 let pokemon;
 let pokemonSprite;
 let newPokemon = [];
+let myBox;
 
 function preload(){
   pokemon = loadJSON("./data/pokedex.json")
@@ -8,11 +9,12 @@ function preload(){
 }
 
 function setup() {
-  createCanvas(1600, 400);
+  createCanvas(1600, 1600);
 
   for(let x = 0; x < 9; x++){
     newPokemon.push(new Pokemon(pokemon[x]))
   }
+  myBox = new Box();
 
 }
 
@@ -21,8 +23,9 @@ function draw() {
   noSmooth()
   //console.log(newPokemon.sprite)
   for(let x = 0; x < 9; x ++){
-    image(newPokemon[x].sprite, 96 * x, 200, 128, 128)
+    newPokemon[x].show(64 * x, 200, 64)
   }
+  myBox.show();
   
   //text(pokemon[149].name.english, 190,190)
 }

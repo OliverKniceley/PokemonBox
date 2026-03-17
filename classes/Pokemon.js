@@ -8,4 +8,20 @@ class Pokemon {
         this.sprite = loadImage(`../sprites/00${[pokemonObject.id]}MS.png`)
     }
 
+    getDexId(){
+        return this.dexId;
+    }
+
+    getName(){
+        return this.name;
+    }
+
+    getSprite(){
+        return this.sprite;
+    }
+
+    show(x, y, size){
+        image(this.getSprite(), x, y, size, size)
+    }
+
 }
