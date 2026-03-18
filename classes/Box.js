@@ -1,7 +1,7 @@
-DEFAULT_BOX_X = 0;
-DEFAULT_BOX_Y = 0;
-DEFAULT_BOX_WIDTH = 400;
-DEFAULT_BOX_HEIGHT = 600;
+DEFAULT_BOX_X = 200;
+DEFAULT_BOX_Y = 200;
+DEFAULT_BOX_WIDTH = 600;
+DEFAULT_BOX_HEIGHT = 500;
 
 class Box {
 
@@ -10,7 +10,7 @@ class Box {
         this.y = y || DEFAULT_BOX_Y;
         this.width = width || DEFAULT_BOX_WIDTH;
         this.height = height || DEFAULT_BOX_HEIGHT;
-        this.background = loadImage(`../sprites/boxBackgrounds/test.png`)
+        this.background = loadImage(`../sprites/boxBackgrounds/test2.png`)
     }
 
     getX(){
@@ -31,8 +31,8 @@ class Box {
 
     show(){
         const size = this.getSize();
-        circle(50,50,50)
-        image(this.background, this.getX(), this.getY, size.width, size.height);
+        //circle(50,50,50)
+        image(this.background, this.getX(), this.getY(), size.width, size.height);
     }
 
 }
